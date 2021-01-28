@@ -1,5 +1,4 @@
 {
-    "Version": "2.1.49.82",
     "Names": {
         "Africa\/Abidjan": "Wā Toharite Greenwich (Abidjan)",
         "Africa\/Accra": "Wā Toharite Greenwich (Accra)",
@@ -46,7 +45,7 @@
         "America\/Cuiaba": "Parahi (Cuiaba)",
         "America\/Curacao": "Wā Ranatiki (Curacao)",
         "America\/Danmarkshavn": "Wā Toharite Greenwich (Danmarkshavn)",
-        "America\/Dawson": "Wā Kiwa (Dawson)",
+        "America\/Dawson": "Wā Maunga (Dawson)",
         "America\/Dawson_Creek": "Wā Maunga (Dawson Creek)",
         "America\/Denver": "Wā Maunga (Denver)",
         "America\/Detroit": "Wā Rāwhiti (Detroit)",
@@ -132,7 +131,7 @@
         "America\/Toronto": "Wā Rāwhiti (Toronto)",
         "America\/Tortola": "Wā Ranatiki (Tortola)",
         "America\/Vancouver": "Wā Kiwa (Vancouver)",
-        "America\/Whitehorse": "Wā Kiwa (Whitehorse)",
+        "America\/Whitehorse": "Wā Maunga (Whitehorse)",
         "America\/Winnipeg": "Wā Waenga (Winnipeg)",
         "America\/Yakutat": "Hononga o Amerika (Yakutat)",
         "America\/Yellowknife": "Wā Maunga (Yellowknife)",

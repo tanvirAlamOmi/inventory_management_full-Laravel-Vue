@@ -1,5 +1,4 @@
 {
-    "Version": "2.1.47.71",
     "Names": {
         "AF": "Afghanistani",
         "AI": "Anguila",
@@ -10,11 +9,8 @@
         "BY": "Belarusi",
         "CC": "Visiwa vya Kokos (Keeling)",
         "CD": "Kongo - Kinshasa",
-        "CI": "Ivorikosti",
-        "CY": "Saiprasi",
-        "DK": "Denmaki",
+        "CV": "Kepuvede",
         "EC": "Ekwado",
-        "FM": "Mikronesia",
         "GA": "Gaboni",
         "GL": "Grinilandi",
         "GP": "Gwadelupe",
@@ -34,10 +30,8 @@
         "MC": "Monako",
         "MK": "Masedonia",
         "MM": "Myama (Burma)",
-        "MO": "Makau SAR China",
         "MQ": "Martiniki",
         "MS": "Montserati",
-        "MV": "Maldivi",
         "NC": "Nyukaledonia",
         "NE": "Nijeri",
         "NO": "Norwe",
@@ -63,7 +57,6 @@
         "VA": "Mji wa Vatikani",
         "VG": "Visiwa vya Virgin vya Uingereza",
         "VI": "Visiwa vya Virgin vya Marekani",
-        "VN": "Vietnamu",
         "YT": "Mayote"
     }
 }
