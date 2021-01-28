@@ -16,9 +16,9 @@
       <div class="col-lg-12">
         <div class="well" style="box-shadow: 0 5px 15px rgba(0,0,0,.5">
             
-       @role('admin|data entry')
+       {{-- @role('admin|data entry') --}}
        <a href="/products/create" class="btn btn-success btn-block"> <span class="fa fa-plus"></span><b> Create Product</b></a>
-       @endrole
+       {{-- @endrole --}}
         <table class="table table-hover table-bordered">
             <thead style="background-color:#7528e7; color:floralwhite">
                 <tr>
@@ -53,14 +53,14 @@
     <td>{{$product->is_published == 1 ? 'Published' : 'Unpublished'}} </td>
                     
     <td>
-      @role('admin|data entry')
+      {{-- @role('admin|data entry') --}}
       <a class="btn btn-success" href="{{url('/products/edit/'.$product->id)}}" title="Edit">
         <span class="fa fa-pencil-square-o">  </span>
       </a>
       <a class="btn btn-danger" href="{{url('/products/delete/'.$product->id)}}" title="Delete" onclick="return confirm('Are you sure?')">
         <span class="fa fa-trash-o">  </span>
       </a>
-      @endrole
+      {{-- @endrole --}}
       <a class="btn btn-info" href="{{url('/products/view/'.$product->id)}}"  title="View Details">
         <span class="fa fa-info-circle"></span>
       </a>          

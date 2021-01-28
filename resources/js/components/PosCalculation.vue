@@ -249,11 +249,6 @@ import {EventBus} from '../app';
   
 }
 
-.active{  
-  height:50px;
-  z-index: 2;
-}
-
 .empty:before{
   Content:"Empty Inventory!";
 }

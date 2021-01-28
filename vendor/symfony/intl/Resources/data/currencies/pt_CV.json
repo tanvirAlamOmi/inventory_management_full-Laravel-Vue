@@ -1,5 +1,4 @@
 {
-    "Version": "2.1.47.71",
     "Names": {
         "CVE": [
             "​",
@@ -7,8 +6,9 @@
             {}
         ],
         "PTE": [
-            "​PTE",
-            "Escudo português"
+            "PTE",
+            "escudo português",
+            {}
         ]
     }
 }

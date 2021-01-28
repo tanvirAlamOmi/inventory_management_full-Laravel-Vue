@@ -37,32 +37,32 @@ final class Intl
      * The number of resource bundles to buffer. Loading the same resource
      * bundle for n locales takes up n spots in the buffer.
      */
-    const BUFFER_SIZE = 10;
+    public const BUFFER_SIZE = 10;
 
     /**
      * The directory name of the currency data.
      */
-    const CURRENCY_DIR = 'currencies';
+    public const CURRENCY_DIR = 'currencies';
 
     /**
      * The directory name of the language data.
      */
-    const LANGUAGE_DIR = 'languages';
+    public const LANGUAGE_DIR = 'languages';
 
     /**
      * The directory name of the script data.
      */
-    const SCRIPT_DIR = 'scripts';
+    public const SCRIPT_DIR = 'scripts';
 
     /**
      * The directory name of the locale data.
      */
-    const LOCALE_DIR = 'locales';
+    public const LOCALE_DIR = 'locales';
 
     /**
      * The directory name of the region data.
      */
-    const REGION_DIR = 'regions';
+    public const REGION_DIR = 'regions';
 
     /**
      * The directory name of the zone data.
@@ -109,7 +109,7 @@ final class Intl
      *
      * @return bool Returns true if the intl extension is installed, false otherwise
      */
-    public static function isExtensionLoaded()
+    public static function isExtensionLoaded(): bool
     {
         return class_exists('\ResourceBundle');
     }
@@ -121,9 +121,9 @@ final class Intl
      *
      * @deprecated since Symfony 4.3, to be removed in 5.0. Use {@see Currencies} instead.
      */
-    public static function getCurrencyBundle()
+    public static function getCurrencyBundle(): CurrencyBundleInterface
     {
-        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" instead.', __METHOD__, Currencies::class), E_USER_DEPRECATED);
+        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" instead.', __METHOD__, Currencies::class), \E_USER_DEPRECATED);
 
         if (null === self::$currencyBundle) {
             self::$currencyBundle = new CurrencyBundle(
@@ -143,9 +143,9 @@ final class Intl
      *
      * @deprecated since Symfony 4.3, to be removed in 5.0. Use {@see Languages} or {@see Scripts} instead.
      */
-    public static function getLanguageBundle()
+    public static function getLanguageBundle(): LanguageBundleInterface
     {
-        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" or "%s" instead.', __METHOD__, Languages::class, Scripts::class), E_USER_DEPRECATED);
+        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" or "%s" instead.', __METHOD__, Languages::class, Scripts::class), \E_USER_DEPRECATED);
 
         if (null === self::$languageBundle) {
             self::$languageBundle = new LanguageBundle(
@@ -169,9 +169,9 @@ final class Intl
      *
      * @deprecated since Symfony 4.3, to be removed in 5.0. Use {@see Locales} instead.
      */
-    public static function getLocaleBundle()
+    public static function getLocaleBundle(): LocaleBundleInterface
     {
-        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" instead.', __METHOD__, Locales::class), E_USER_DEPRECATED);
+        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" instead.', __METHOD__, Locales::class), \E_USER_DEPRECATED);
 
         if (null === self::$localeBundle) {
             self::$localeBundle = new LocaleBundle(
@@ -190,9 +190,9 @@ final class Intl
      *
      * @deprecated since Symfony 4.3, to be removed in 5.0. Use {@see Countries} instead.
      */
-    public static function getRegionBundle()
+    public static function getRegionBundle(): RegionBundleInterface
     {
-        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" instead.', __METHOD__, Countries::class), E_USER_DEPRECATED);
+        @trigger_error(sprintf('The method "%s()" is deprecated since Symfony 4.3, use "%s" instead.', __METHOD__, Countries::class), \E_USER_DEPRECATED);
 
         if (null === self::$regionBundle) {
             self::$regionBundle = new RegionBundle(
@@ -210,13 +210,13 @@ final class Intl
      *
      * @return string|null The ICU version or NULL if it could not be determined
      */
-    public static function getIcuVersion()
+    public static function getIcuVersion(): ?string
     {
         if (false === self::$icuVersion) {
             if (!self::isExtensionLoaded()) {
                 self::$icuVersion = self::getIcuStubVersion();
             } elseif (\defined('INTL_ICU_VERSION')) {
-                self::$icuVersion = INTL_ICU_VERSION;
+                self::$icuVersion = \INTL_ICU_VERSION;
             } else {
                 try {
                     $reflector = new \ReflectionExtension('intl');
@@ -240,7 +240,7 @@ final class Intl
      *
      * @return string The version of the installed ICU data
      */
-    public static function getIcuDataVersion()
+    public static function getIcuDataVersion(): string
     {
         if (false === self::$icuDataVersion) {
             self::$icuDataVersion = trim(file_get_contents(self::getDataDirectory().'/version.txt'));
@@ -254,9 +254,9 @@ final class Intl
      *
      * @return string The ICU version of the stub classes
      */
-    public static function getIcuStubVersion()
+    public static function getIcuStubVersion(): string
     {
-        return '64.2';
+        return '68.1';
     }
 
     /**
@@ -264,17 +264,15 @@ final class Intl
      *
      * @return string The absolute path to the data directory
      */
-    public static function getDataDirectory()
+    public static function getDataDirectory(): string
     {
         return __DIR__.'/Resources/data';
     }
 
     /**
      * Returns the cached bundle entry reader.
-     *
-     * @return BundleEntryReaderInterface The bundle entry reader
      */
-    private static function getEntryReader()
+    private static function getEntryReader(): BundleEntryReaderInterface
     {
         if (null === self::$entryReader) {
             self::$entryReader = new BundleEntryReader(new BufferedBundleReader(

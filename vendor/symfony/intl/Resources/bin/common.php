@@ -62,19 +62,19 @@ function get_icu_version_from_genrb($genrb)
     }
 
     if (!preg_match('/ICU version ([\d\.]+)/', implode('', $output), $matches)) {
-        return;
+        return null;
     }
 
     return $matches[1];
 }
 
-error_reporting(E_ALL);
+error_reporting(\E_ALL);
 
 set_error_handler(function ($type, $msg, $file, $line) {
     throw new \ErrorException($msg, 0, $type, $file, $line);
 });
 
-set_exception_handler(function (\Throwable $exception) {
+set_exception_handler(function (Throwable $exception) {
     echo "\n";
 
     $cause = $exception;

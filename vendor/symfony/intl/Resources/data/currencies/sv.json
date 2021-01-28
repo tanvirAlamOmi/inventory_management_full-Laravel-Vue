@@ -1,5 +1,4 @@
 {
-    "Version": "2.1.48.90",
     "Names": {
         "ADP": [
             "ADP",
@@ -7,7 +6,7 @@
         ],
         "AED": [
             "AED",
-            "Förenade Arabemiratens dirham"
+            "emiratisk dirham"
         ],
         "AFA": [
             "AFA",
@@ -31,7 +30,7 @@
         ],
         "ANG": [
             "ANG",
-            "Nederländska Antillernas gulden"
+            "Antillergulden"
         ],
         "AOA": [
             "AOA",
@@ -103,7 +102,7 @@
         ],
         "BBD": [
             "Bds$",
-            "Barbados-dollar"
+            "barbadisk dollar"
         ],
         "BDT": [
             "BDT",
@@ -147,7 +146,7 @@
         ],
         "BMD": [
             "BM$",
-            "Bermuda-dollar"
+            "bermudisk dollar"
         ],
         "BND": [
             "BND",
@@ -263,7 +262,7 @@
         ],
         "CNH": [
             "CNH",
-            "CNH"
+            "kinesisk yuan (offshore)"
         ],
         "CNX": [
             "CNX",
@@ -523,7 +522,7 @@
         ],
         "JMD": [
             "JM$",
-            "Jamaica-dollar"
+            "jamaicansk dollar"
         ],
         "JOD": [
             "JOD",
@@ -571,7 +570,7 @@
         ],
         "KYD": [
             "KYD",
-            "Cayman-dollar"
+            "caymansk dollar"
         ],
         "KZT": [
             "KZT",
@@ -887,7 +886,7 @@
         ],
         "SHP": [
             "SHP",
-            "S:t Helena-pund"
+            "sankthelenskt pund"
         ],
         "SIT": [
             "SIT",
@@ -971,7 +970,7 @@
         ],
         "TPE": [
             "TPE",
-            "timoriansk escudo"
+            "östtimoresisk escudo"
         ],
         "TRL": [
             "TRL",
@@ -983,11 +982,11 @@
         ],
         "TTD": [
             "TTD",
-            "Trinidad och Tobago-dollar"
+            "Trinidaddollar"
         ],
         "TWD": [
             "TWD",
-            "Taiwandollar"
+            "taiwanesisk dollar"
         ],
         "TZS": [
             "TZS",
@@ -1011,7 +1010,7 @@
         ],
         "USD": [
             "US$",
-            "US-dollar"
+            "amerikansk dollar"
         ],
         "USN": [
             "USN",
@@ -1032,6 +1031,10 @@
         "UYU": [
             "UYU",
             "uruguayansk peso"
+        ],
+        "UYW": [
+            "UYW",
+            "uruguayansk indexenhet för nominell lön"
         ],
         "UZS": [
             "UZS",

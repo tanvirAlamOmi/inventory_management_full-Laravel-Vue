@@ -2,11 +2,11 @@
 
 namespace Laravel\Cashier;
 
-use Money\Money;
-use Money\Currency;
-use NumberFormatter;
 use Money\Currencies\ISOCurrencies;
+use Money\Currency;
 use Money\Formatter\IntlMoneyFormatter;
+use Money\Money;
+use NumberFormatter;
 
 class Cashier
 {
@@ -15,7 +15,7 @@ class Cashier
      *
      * @var string
      */
-    const VERSION = '10.1.0';
+    const VERSION = '10.2.0';
 
     /**
      * The Stripe API version.
@@ -37,6 +37,13 @@ class Cashier
      * @var bool
      */
     public static $runsMigrations = true;
+
+    /**
+     * Indicates if Cashier routes will be registered.
+     *
+     * @var bool
+     */
+    public static $registersRoutes = true;
 
     /**
      * Get the default Stripe API options.
@@ -92,6 +99,18 @@ class Cashier
     public static function ignoreMigrations()
     {
         static::$runsMigrations = false;
+
+        return new static;
+    }
+
+    /**
+     * Configure Cashier to not register its routes.
+     *
+     * @return static
+     */
+    public static function ignoreRoutes()
+    {
+        static::$registersRoutes = false;
 
         return new static;
     }

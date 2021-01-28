@@ -13,8 +13,6 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\Permission\Exceptions\PermissionAlreadyExists;
 use Spatie\Permission\Contracts\Permission as PermissionContract;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 
 class Permission extends Model implements PermissionContract
 {
@@ -144,6 +142,8 @@ class Permission extends Model implements PermissionContract
      */
     protected static function getPermissions(array $params = []): Collection
     {
-        return app(PermissionRegistrar::class)->getPermissions($params);
+        return app(PermissionRegistrar::class)
+            ->setPermissionClass(static::class)
+            ->getPermissions($params);
     }
 }

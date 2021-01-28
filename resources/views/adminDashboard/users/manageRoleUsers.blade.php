@@ -25,9 +25,9 @@
                     <th>Email</th>
                     <th>Password</th>
                     <th>User Role</th>
-                    @role('admin') 
+                    {{-- @role('admin')  --}}
                     <th>Action</th>
-                    @endrole
+                    {{-- @endrole --}}
                 </tr>
             </thead>
             <tbody>
@@ -53,7 +53,7 @@
                                 echo 'Operator';
                             }?>
                         </td>
-                   @role('admin')
+                   {{-- @role('admin') --}}
                     <td>
                         <a class="btn btn-success" href="{{url('/users/edit/'.$user->id)}}" title="Edit">
                             <span class="fa fa-pencil-square-o">  </span>
@@ -62,7 +62,7 @@
                             <span class="fa fa-trash-o">  </span>
                         </a>
                     </td>
-                    @endrole
+                    {{-- @endrole --}}
                 </tr>
                 @endforeach
             </tbody>

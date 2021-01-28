@@ -76,7 +76,3 @@ searchproduct(){
 }
 }
 </script>
-
-<style>
-
-</style>

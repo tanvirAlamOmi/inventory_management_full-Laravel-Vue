@@ -15,9 +15,9 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="well" style="box-shadow: 0 5px 15px rgba(0,0,0,.5">
-            @role('admin|data entry')
+            {{-- @role('admin|data entry') --}}
                 <a type="submit" class="btn btn-success btn-block" href="/stocks/create" ><span class="fa fa-plus"></span><b> Create Stock</b></a>
-            @endrole
+            {{-- @endrole --}}
             <hr>
 
             <div class="col-md-6">
@@ -53,7 +53,9 @@
                     <th>Status</th>
                     <th>Stocked By</th>
                     <th>Updated Date</th>
-                  @role('admin|data entry')  <th>Action</th> @endrole
+                  {{-- @role('admin|data entry')  --}}
+                   <th>Action</th> 
+                   {{-- @endrole --}}
                 </tr>
             </thead>
             <tbody id="table_id">
@@ -73,7 +75,7 @@
                     <td>{{$stock->is_available == 1 ? 'Available' : 'Unavailable'}} </td>
                     <td>{!! $stock->user_name !!}</td>
                     <td>{!!Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $stock->updated_at)->format('d-M-y')!!}</td>
-                   @role('admin|data entry')
+                   {{-- @role('admin|data entry') --}}
                     <td>
                         <a class="btn btn-success" href="{{url('/stocks/edit/'.$stock->id)}}" title="Edit">
                             <span class="fa fa-pencil-square-o">  </span>
@@ -82,7 +84,7 @@
                             <span class="fa fa-trash-o">  </span>
                         </a>
                     </td>
-                    @endrole
+                    {{-- @endrole --}}
                 </tr>
                 @endforeach
             </tbody>

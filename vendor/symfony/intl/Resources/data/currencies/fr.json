@@ -1,5 +1,4 @@
 {
-    "Version": "2.1.49.82",
     "Names": {
         "ADP": [
             "ADP",
@@ -915,7 +914,7 @@
         ],
         "TTD": [
             "$TT",
-            "dollar trinidadien"
+            "dollar de Trinité-et-Tobago"
         ],
         "TWD": [
             "TWD",
@@ -990,7 +989,7 @@
             "vatu vanuatuan"
         ],
         "WST": [
-            "WS$",
+            "$WS",
             "tala samoan"
         ],
         "XAF": [

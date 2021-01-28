@@ -1,5 +1,4 @@
 {
-    "Version": "2.1.48.42",
     "Names": {
         "ADP": [
             "ADP",
@@ -303,7 +302,7 @@
         ],
         "CZK": [
             "CZK",
-            "Koruna Cheska"
+            "Koruna Ceko"
         ],
         "DDM": [
             "DDM",
@@ -327,7 +326,7 @@
         ],
         "DZD": [
             "DZD",
-            "Dinar Algeria"
+            "Dinar Aljazair"
         ],
         "ECS": [
             "ECS",
@@ -531,7 +530,7 @@
         ],
         "KGS": [
             "KGS",
-            "Som Kirgistan"
+            "Som Kirgizstan"
         ],
         "KHR": [
             "KHR",
@@ -567,7 +566,7 @@
         ],
         "KZT": [
             "KZT",
-            "Tenge Kazakstan"
+            "Tenge Kazakhstan"
         ],
         "LAK": [
             "LAK",
@@ -799,7 +798,7 @@
         ],
         "PLN": [
             "PLN",
-            "Polandia Zloty"
+            "Zloty Polandia"
         ],
         "PLZ": [
             "PLZ",
@@ -951,7 +950,7 @@
         ],
         "TMT": [
             "TMT",
-            "Manat Turkimenistan"
+            "Manat Turkmenistan"
         ],
         "TND": [
             "TND",
@@ -1059,7 +1058,7 @@
         ],
         "XAF": [
             "FCFA",
-            "Franc CFA BEAC"
+            "Franc CFA Afrika Tengah"
         ],
         "XCD": [
             "EC$",
@@ -1079,7 +1078,7 @@
         ],
         "XOF": [
             "CFA",
-            "Franc CFA BCEAO"
+            "Franc CFA Afrika Barat"
         ],
         "XPF": [
             "CFPF",

@@ -1,6 +1,9 @@
 {
-    "Version": "2.1.47.69",
     "Names": {
+        "BMD": [
+            "BMD",
+            "Bermudian Dollar"
+        ],
         "BYB": [
             "BYB",
             "Belarusian New Rouble (1994–1999)"
@@ -21,6 +24,10 @@
             "LVR",
             "Latvian Rouble"
         ],
+        "PHP": [
+            "PHP",
+            "Philippine Peso"
+        ],
         "RUB": [
             "RUB",
             "Russian Rouble"
@@ -28,6 +35,10 @@
         "RUR": [
             "RUR",
             "Russian Rouble (1991–1998)"
+        ],
+        "SHP": [
+            "SHP",
+            "St Helena Pound"
         ],
         "TJR": [
             "TJR",

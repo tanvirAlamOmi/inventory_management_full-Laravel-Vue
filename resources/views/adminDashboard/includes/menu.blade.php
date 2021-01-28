@@ -28,14 +28,14 @@
                                 </font><span class="fa arrow"></span></a>
                           
                                     <ul class="nav nav-second-level">
-                                        @role('admin')
+                                        {{-- @role('admin') --}}
                                         <li>
                                             <a href="{{route('users.create')}}"><i class="fa fa-plus-circle fa-fw"></i><font face="Arial Black" style="z-index:10">
                                                     <font color="#ff0000">A</font><font color="#">dd</font>
                                                         <font color="#ff0000">U</font><font color="#">ser</font>
                                                     </font></a>
                                         </li>
-                                        @endrole
+                                        {{-- @endrole --}}
                                         <li>
                                             <a href="{{route('users.manage')}}"><i class="fa fa-edit fa-fw"></i><font face="Arial Black" style="z-index:10">
                                                     <font color="#ff0000">M</font><font color="#">anage</font>
@@ -181,10 +181,10 @@
                             </li>
                             {{-- END STOCK --}}
                             
-                        <li >
+                        {{-- <li >
                             <a href="{{route('Sync.sync')}}"><i class="fa fa-refresh  fa-fw"></i> 
                                 <font color="#ff0000">S</font><font color="#">ynchronize</font></a>
-                        </li>
+                        </li> --}}
                             
 
 

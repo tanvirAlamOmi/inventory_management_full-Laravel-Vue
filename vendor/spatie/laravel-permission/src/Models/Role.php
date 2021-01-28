@@ -12,8 +12,6 @@ use Spatie\Permission\Contracts\Role as RoleContract;
 use Spatie\Permission\Traits\RefreshesPermissionCache;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
 
 class Role extends Model implements RoleContract
 {

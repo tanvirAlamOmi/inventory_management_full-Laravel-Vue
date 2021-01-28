@@ -1,6 +1,9 @@
 {
-    "Version": "2.1.49.14",
     "Names": {
+        "USD": [
+            "$",
+            "US Dollar"
+        ],
         "VEF": [
             "VEF",
             "Venezuelan Bolívar"
