@@ -1784,6 +1784,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1888,20 +1889,31 @@ __webpack_require__.r(__webpack_exports__);
         var data = {};
         data['product'] = product;
         data['quantity'] = quantity;
-        axios.post('/posIndex/invoice', data).then(function (response) {
+        axios.post('/posIndex/sellDescription', data).then(function (response) {
           _this2.product = response.data;
           console.log(response);
         })["catch"](function (error) {
           console.log(error);
         });
       }
+
+      location.href = '/posIndex/pdfview';
     },
     details: function details(p) {
       var data = {};
       data['name'] = $('#name')[0].value;
       data['phone'] = $('#phone')[0].value;
+
+      if (data['name'] == []) {
+        data['name'] = 'Customer';
+      }
+
+      if (data['phone'] == []) {
+        data['phone'] = '01***-******';
+      }
+
       data['total'] = $('#totalprice')[0].innerHTML;
-      axios.post('/posIndex/saleData', data).then(function (response) {
+      axios.post('/posIndex/sellData', data).then(function (response) {
         console.log(response);
       })["catch"](function (error) {
         console.log(error);
@@ -22420,7 +22432,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.notify{  \r\n  position:-webkit-sticky;  \r\n  position:sticky;\r\n  top: 0px;\r\n  right: 0px;\r\n  width: 100%;\r\n  box-sizing:border-box;\r\n  color:white;  \r\n  text-align:center;\r\n  background:red;\r\n  overflow:hidden;\r\n  box-sizing:border-box;\r\n  transition:height .2s;\n}\n#notifyType:before{\r\n  display:block;\r\n  margin-top:10px;\n}\n.empty:before{\r\n  Content:\"Empty Inventory!\";\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.notify{  \r\n  position:-webkit-sticky;  \r\n  position:sticky;\r\n  top: 0px;\r\n  right: 0px;\r\n  width: 100%;\r\n  box-sizing:border-box;\r\n  color:white;  \r\n  text-align:center;\r\n  background:red;\r\n  overflow:hidden;\r\n  box-sizing:border-box;\r\n  transition:height .2s;\n}\n#notifyType:before{\r\n  display:block;\r\n  margin-top:10px;\n}\n.active{  \r\n  height:50px;\r\n  z-index: 2;\n}\n.empty:before{\r\n  Content:\"Empty Inventory!\";\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -67124,7 +67136,8 @@ var render = function() {
                       name: "name",
                       id: "name",
                       placeholder: "Name",
-                      type: "text"
+                      type: "text",
+                      required: ""
                     }
                   })
                 ],
@@ -67139,11 +67152,9 @@ var render = function() {
                     attrs: {
                       name: "phone",
                       id: "phone",
-                      placeholder: "01***-******",
-                      type: "tel",
-                      min: "0",
-                      max: "9",
-                      pattern: "[0-9]{5}-[0-9]{6}"
+                      placeholder: "phone",
+                      type: "text",
+                      required: ""
                     }
                   })
                 ],
@@ -67274,7 +67285,7 @@ var render = function() {
                       {
                         staticStyle: {
                           "background-color": "rgba(255,255,0,0.3)",
-                          color: "black"
+                          color: "floralwhite"
                         }
                       },
                       [

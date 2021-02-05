@@ -138,6 +138,10 @@ Route::post('/posIndex/invoice/', 'InvoiceController@invoice')->name('Invoice.in
 // ->middleware('role_or_permission:admin|data entry|operator');
 Route::post('/posIndex/saleData/', 'SaleController@saleData')->name('saleData.saleData');
 // ->middleware('role_or_permission:admin|data entry|operator');
+Route::post('/posIndex/sellDescription/', 'SellDescriptionController@sellDescription')->name('sellDescription.sellDescription');
+//->middleware('role_or_permission:admin|data entry|operator');
+Route::get('/posIndex/pdf/','InvoicePdfController@export_pdf')->name('posIndex.pdf');
+Route::get('/posIndex/pdfview/','InvoicePdfController@view_pdf')->name('posIndex.viewpdf');
 
 Route::get('event', function(){
     // dd('hhh');

@@ -13,12 +13,11 @@
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             <div class="notify"><span id="notifyType" class=""></span></div>
                 <ul style="margin-top:0px">
-
                     <b-field label="Name">
-                        <b-input name="name" id="name" placeholder="Name" type="text" required=""></b-input>
+                        <b-input name="name" id="name" placeholder="Name" type="text"></b-input>
                     </b-field>
                     <b-field label="Mobile Num">
-                        <b-input  name="phone"  id="phone" placeholder="phone" type="text" required></b-input>
+                        <b-input name="phone"  id="phone" placeholder="01***-******" type="tel" min="0" max="9"  pattern="[0-9]{5}-[0-9]{6}"></b-input>
                     </b-field>
                 </ul>
 
@@ -62,13 +61,13 @@
                         <th>Total</th>
                         <th id='totalprice'>{{ grandtotal }}</th>
                     </tr>
-                    <tr  style="background-color:rgba(255,255,0,0.3); color:floralwhite">
+                    <tr  style="background-color:rgba(255,255,0,0.3); color:floralwhite;">
                         <th></th>
                         <th></th>
                         <th>Paid</th>
-                        <th><input class="form-control" v-model="paid" type="text" pattern="\d+"></th>
+                        <th ><input class="form-control" v-model="paid" type="text" pattern="\d+"></th>
                     </tr>
-                    <tr  style="background-color:rgba(255,255,0,0.3); color:floralwhite">
+                    <tr  style="background-color:rgba(255,255,0,0.3); color:black;">
                         <th></th>
                         <th></th>
                         <th>Due</th>
@@ -194,7 +193,7 @@ import {EventBus} from '../app';
                 const data = {};
                 data['product'] = product;
                 data['quantity'] = quantity;
-                axios.post('/posIndex/sellDescription', data)
+                axios.post('/posIndex/invoice', data)
                     .then(response => {
                         this.product=response.data;
                         console.log(response);
@@ -203,27 +202,23 @@ import {EventBus} from '../app';
                     console.log(error);
                     });
                 }
-                location.href='/posIndex/pdfview';
             },
             
             details:function(p){
                 const data = {};
+
                 data['name'] = $('#name')[0].value;
                 data['phone'] = $('#phone')[0].value;
-                if(data['name']== [ ]){
-                    data['name'] = 'Customer';
-                }
-                if(data['phone']== [ ]){
-                    data['phone'] = '01***-******';
-                }
                 data['total'] = $('#totalprice')[0].innerHTML;
-                axios.post('/posIndex/sellData',data)
+                axios.post('/posIndex/saleData',data)
                     .then(response => {
+                        
                         console.log(response);
                     })
                     .catch(function (error) {
                     console.log(error);
                     });
+
                 
                 this.call(p);
                 
@@ -252,11 +247,6 @@ import {EventBus} from '../app';
   display:block;
   margin-top:10px; 
   
-}
-
-.active{  
-  height:50px;
-  z-index: 2;
 }
 
 .empty:before{
